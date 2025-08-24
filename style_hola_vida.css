@@ -1,0 +1,229 @@
+.w3-row-padding {
+  margin-top: 100px; /* altura del header */
+}
+*{
+  padding: 0;
+  border: 0;
+  box-sizing: border-box ;
+  font-family: sans-serif;
+}
+.logo{
+  max-width: 4rem;
+}
+.nav-menu{
+  display: flex;/*se posicionan uno al lado del otro*/
+  gap: 1rem;  /*separa el cont */
+ 
+}
+
+/* Banner fijo en la parte superior */
+.banner {
+  display: flex; /* ubica en fila*/
+  align-items: center; 
+   justify-content: space-between;/*separo para quedar en diferentes esquinas*/
+  padding: 2rem; /*queda separaddo del borde*/
+  background-color: rgb(24, 98, 75);
+  padding: 1em 0;
+  width: 100%;
+  top: 0;
+  z-index: 1000;  /*se posiciona encima de todo*/
+  position: fixed;
+}
+
+
+/* Botón hamburguesa oculto por defecto */
+.btn_hamb {
+  display: none;        /* Oculto en escritorio */
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+ 
+}
+.form_contacto{ 
+width: 400px;
+height: auto;
+margin-top: 14px;
+padding: 20px;
+border: 1px solid #69a7e2;
+border-radius: 20px;
+box-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+background-color: #417761;
+}
+legend{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: larger;
+}
+input, textarea{
+  margin-top: 5px;
+}
+.ver-imagen{
+  width: 120px;
+  height: 120px;
+  display: block;
+  border: 2px solid #69a7e2;
+}
+
+.w3-bar{
+
+ color: rgb(9, 69, 22);
+  align-items: flex-end; /* alinea a la dereccha*/
+  justify-content: flex-end;
+}
+/* Inicia css etiq detail*/
+ details {
+    width: 300px;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 6px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  summary {
+    cursor: pointer;
+    padding: 8px;
+    background-color: #2c762d;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+
+
+  ol {
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+
+  li {
+    margin: 5px 0;
+  }
+/* termina css etiq detalle */
+
+.w3-bar .w3-button {
+  color: rgb(9, 69, 22);
+}
+
+/* items del submenu*/
+.w3-dropdown-content a {
+  color: rgb(211, 225, 218);
+  text-decoration-line:underline;
+}
+
+/* contenedor submenu personalizado */
+.w3-dropdown-content {
+   background-color: #c4e8c2;
+  position: absolute;
+  min-width: 150px;
+}
+.w3-dropdown-hover:hover .w3-dropdown-content {
+  display: block;
+}
+/* Botón hamburguesa oculto mientas la pant mayor a 768px */
+#nav-toggle {
+  display: none;
+}
+/* Inicia css etiq detail*/
+ details {
+    width: 300px;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 6px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  #galeria_fotos  {
+    margin-top: 20px;
+  }
+  summary {
+    cursor: pointer;
+    padding: 8px;
+    background-color: #2c762d;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+
+
+  ol {
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+
+  li {
+    margin: 5px 0;
+  }
+/* termina css etiq detalle */
+
+/* Responsive */
+/* Ocultar menú y mostrar botón hamburguesa en móviles */
+@media (max-width: 768px) {
+  /* Ocultar el menú por defecto */
+  #nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+  }
+
+  /* Mostrar menú cuando tiene la clase "open" */
+  #nav-menu.open {
+    display: flex;
+  }
+
+
+  /* Mostrar el botón hamburguesa en móviles */
+  #nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .w3-dropdown-hover:hover .w3-dropdown-content  {
+  display: block;
+  flex-direction: column;
+}
+.w3-dropdown-content a {
+  display: block;
+
+}
+
+}
+/*estilos de las imágenes*/
+.catalogo {
+      display: grid; /* Grid para organizar las imágenes en columnas.*/
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+      gap: 15px;
+    }
+    /* cada imagen tiene un recuadro con sombra y texto.*/
+    .item {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .item:hover { /*efecto de ampliar*/
+      transform: scale(1.05);
+    }
+
+    .item img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;/* asegura que la imagen no se deforme*/
+    }
+
+    .item p {
+      margin: 10px;
+      font-weight: bold;
+    }
+    

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio 18 al 21</title>
+     <py-config>{"terminal": "none" }</py-config>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.7.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.7.1/core.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="banner">
+        <img class="logo" src="image/icono_python.png" alt="logo Python">
+            <button id="nav-toggle" class="nav-toggle">☰</button>
+                    <nav class="nav-contenedor">
+                        <ul class="menu">
+                            <li><button class="menu-toggle" aria-controls="#inicio" >INICIO</button></li>  
+                            <li>
+                                <button class="menu-toggle" aria-controls="submenu-18">LAB PYTHON SESION 18</button>
+                                <ul id="submenu-18" class="submenu">                                    
+                                            <li><a href="#sesion18_ejer1">EJERCICIO 1</a></li>
+                                            <li><a href="#sesion18_ejer2">EJERCICIO 2</a></li>
+                                            <li><a href="#sesion18_ejer3">EJERCICIO 3</a></li>
+                                            <li><a href="#sesion18_ejer4">EJERCICIO 4</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button class="menu-toggle" aria-controls="submenu-19" >LAB PYTHON SESION 19</button>                    
+                                <ul id="submenu-19" class="submenu">
+                                    <li><a href="#sesion19_ejer1">EJERCICIO 1</a></li>
+                                    <li><a href="#sesion19_ejer1_2">EJERCICIO 1.2</a></li>
+                                    <li><a href="#sesion19_ejer2">EJERCICIO 2</a></li>
+                                    <li><a href="#sesion19_ejer2_1">EJERCICIO 2_1</a></li>
+                                    <li><a href="#sesion19_ejer3">EJERCICIO 3</a></li>
+                                    <li><a href="#sesion19_ejer4">EJERCICIO 4</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button class="menu-toggle" aria-controls="submenu-20">LAB PYTHON SESION 20</button>                   
+                                <ul id="submenu-20" class="submenu"> 
+                                    <li><a href="#sesion20_ejer1">EJERCICIO 1</a></li>
+                                    <li><a href="#sesion20_ejer2">EJERCICIO 2</a></li>
+                                    <li><a href="#sesion20_ejer3">EJERCICIO 3</a></li>
+                                    <li><a href="#sesion20_ejer4_1">EJERCICIO 4.1</a></li>
+                                    <li><a href="#sesion20_ejer4_2">EJERCICIO 4.2</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button class="menu-toggle" aria-controls="submenu-21">LAB PYTHON SESION 21</button>                    
+                                <ul id="submenu-21" class="submenu">
+                                    <li><a href="#sesion21_ejer1">EJERCICIO 1</a></li>
+                                    <li><a href="#sesion21_ejer2">EJERCICIO 2</a></li>
+                                    <li><a href="#sesion21_ejer3">EJERCICIO 3</a></li>
+                                    <li><a href="#sesion21_ejer4">EJERCICIO 4</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <button class="menu-toggle" aria-controls="enlaces_externos">ENLACES EXTERNOS</button>                    
+                                <ul id="enlaces_externos" class="submenu"> 
+                                    <li><a href="#enlace_sql">Enlace a lab SQL</a></li>
+                                    <li><a href="#enlace2">Enlace a</a></li>
+                                    <li><a href="https://www.w3schools.com" target="_blank">Enlace a W3 School</a></li>
+                                    <li><a href="#enlace3">Enlace a</a></li>
+                                </ul>
+                            </li>
+                        </ul>    
+                </nav>
+    </header>
+        <div class="contenedor"> 
+                <aside class="sidebar">
+                    <h3>Recursos en línea</h3> <!-- ------- -sidebar izquierdo----- ---->
+                        <ul>
+                            <li><a href="https://javiervera123.github.io/entregable4_TalentoTeach/" target="_blank">Hoja de vida</a></li>
+                            <li><a href="https://www.w3schools.com/python/" target="_blank">Mi repositorio</a></li>
+                            <li><a href="https://pyscript.net/" target="_blank">en construcción...</a></li>
+                        </ul>
+                </aside>
+        <main>
+              <!-- ------- -------LABORATORIO  18----- ---->
+            <section class="sesion18" id="sesion18">
+                <article id="sesion18_ejer1">
+                    <h4>Laboratorio 18 ejercicio 1 --pedir datos a estudiante--</h4>
+                        <p>Declaración de Variables:
+                            - Crea variables de tipo `string`, `int`, `float`, y `boolean`.
+                            - Captura por teclado los valores
+                            - Imprime cada una de las variables en la consola.
+                            </p>
+                            <form action="" class="formulario">
+                                <fieldset>
+                                    <legend>Datos personales:</legend>
+                                        <label for="nombre">Por favor, ingrese su nombre...  </label>
+                                        <input id="nombre" type="text" placeholder="Escribe aquí">
+                                        <label for="edad">Ingrese su edad</label>
+                                        <input id="edad" type="number" placeholder="Escribe su edad">
+                                        <label for="estudiante">Eres estudiante?</label>
+                                        <input id="estudiante" type="text" placeholder="Escribir SI/NO">
+                                        <label for="calificacion">ingrese su calificación (max 10)</label>
+                                        <input id="calificacion" type="number" placeholder="Escribe su calificación " max="10">
+                                        <button type="button" py-click="mostrarDatos1">Enviar</button>  <!--el boton debe tener el mismo nombre de la funcion-->
+                                        <p id="resultado18_1">datos de salida</p>
+                                </fieldset>
+                            </form >       
+                 </article>
+                <article id="sesion18_ejer2">
+                    <h4>Laboratorio 18 ejercicio 2 --calculadora--</h4>
+                            <p>Declaración de Variables:
+                                - Crea variables de tipo `string`, `int`, `float`, y `boolean`.
+                            - Captura por teclado los valores
+                            - Imprime cada una de las variables en la consola.
+                                </p>
+                            <form action="" class="formulario">
+                                <fieldset>
+                                    <legend>Operaciones con 2 #:</legend>
+                                        <label for="n1">Por favor, ingrese un número </label>
+                                        <input id="n1" type="number" placeholder="número 1" >
+                                        <label for="n2">Ingrese segundo número</label>
+                                        <input id="n2" type="number" placeholder="número 2" >
+                                        <button type="button" py-click="mostrarDatos2">Enviar</button>  <!--el boton debe tener el mismo nombre de la funcion-->
+                                        <p id="resultado18_2">resultados de la calculadora</p>
+                                </fieldset>
+                            </form >
+                 </article>
+            </section>
+                  <!-- ------- -------LABORATORIO  19----- ---->
+            <section class="sesion19">
+                    <article id="sesion19_ejer1">
+                            <h4>Laboratorio 19 ejercicio 1 --# par o impar--</h4>
+                                 <p>Parte 1: Condicionales en python
+                                    - Escribir un programa que solicite al usuario un número por 
+                                      teclado y determine si es par o
+                                      impar. Mostrar un mensaje adecuado en cada caso.
+                                </p>
+                            <form action="" class="formulario">
+                                <fieldset>
+                                    <legend>Calcular si es par:</legend>
+                                        <label for="input_19_par">Por favor, ingrese un número para calcular si es par o impar..</label>
+                                        <input id="input_19_par" type="number" placeholder="número " >
+                                        <button type="button" py-click="mostrarDatosprincipal19_1">Enviar</button>  <!--el boton debe tener el mismo nombre de la funcion-->
+                                        <p id="resultado19_1">Será Par?</p>
+                                </fieldset>
+                            </form >
+                        </article>
+                        <article id="sesion19_ejer1_2">    
+                            <h5>laboratorio 19 ejercicio 1.2 --Cantidad de dígitos--</h5>
+                            <p>Escribir un programa que pida ingresar por teclado un número positivo de
+                                uno, dos o tres dígitos (1..999) mostrar un mensaje indicando si el número tiene uno, 
+                                dos o tres dígitos.</p>
+                                <form action="" class="formulario">
+                                <fieldset>
+                                    <legend>calcular cantidad dígitos:</legend>
+                                        <label for="input_19_1_2">Por favor, ingrese un número para calcular cantidad de dígitos..</label>
+                                        <input id="input_19_1_2" type="number" placeholder="número " >
+                                        <button type="button" py-click="mostrarDatosPrincipal19_1_2">Enviar</button>  <!--el boton debe tener el mismo nombre de la funcion-->
+                                        <p id="resultado19_1_2">Total dígitos?</p>
+                                </fieldset>
+                            </form >
+                        </article>
+                        <article id="sesion19_ejer2">
+                            <h4>laboratorio 19 ejercicio 2: --Bucles WHILE con Listas--</h4>
+                                <p>-En una empresa trabajan n empleados cuyos sueldos oscilan entre $1000000 y
+                                    $5000000, realizar un programa que lea los sueldos que cobra cada empleado e informe
+                                    cuántos empleados cobran entre $1000000 y $3000000 y cuántos cobran más de $3000000.
+                                    Además el programa deberá informar el total que gasta la empresa en sueldos al personal.
+                                    n=int(input("Cuantos empleados tiene la empresa:"))
+                                </p>
+                            <form action="" class="formulario">
+                                <fieldset>
+                                    <legend>DATOS DE EMPLEADOS:</legend>
+                                        <label for="input_19_cant_empl">*Cantidad de empleados</label>
+                                        <input id="input_19_cant_empl"type="number" placeholder="# empleados.. " required>
+
+                                        <label for="input_19_nom_empl">*Ingrese nombre del empleado</label>
+                                        <input id="input_19_nom_empl" type="text" placeholder="nombre.." required >
+
+                                        <label for="input_19_salario">*Salario del empleado</label>
+                                        <input id="input_19_salario"type="number" placeholder="salario.. "required min="1000000" max="5000000">
+
+                                        <button type="button" py-click="agregar_empleados">Agregar empleado</button>  <!--el boton debe tener el mismo nombre de la funcion-->
+                                        <button type="button" py-click="finalizar_registro">Mostrar datos..</button>
+                                        <button type="button" py-click="reiniciar_datos">reiniciar</button>
+                                        <button type="button" py-click="boton_imprimir">🖨️ Imprimir Reporte</button>
+                                       
+                                        <p id="resultado19_2">SALIDA DE DATOS AQUÍ !..</p>
+                                </fieldset>
+                            </form >
+                        </article>
+                        <article id="sesion19_ejer2_1">
+                            <h4>laboratorio 19 ejercicio 2.1: --Bucles FOR--</h4>
+                                <p> Bucle For: Escribir un programa que pida ingresar coordenadas (x,y) que representan puntos
+                                    en el plano Cartesiano. Informar cuántos puntos se han ingresado en el primer, segundo, tercer y cuarto
+                                    cuadrante. Al comenzar el programa se pide que se ingrese la cantidad de puntos a procesar.
+                                </p>
+                            <form action="" class="formulario">
+                                <fieldset>
+                                    <legend>Plano cartesiano:</legend>
+                                        <label for="input_19_2_puntos">"Ingrese cantidad de puntos para coordenadas (X,Y)..</label>
+                                        <input id="input_19_2_puntos"type="number" placeholder="cantidad puntos" required>
+                                        <label for="input_19_2_x">*Coordenada X</label>
+                                        <input id="input_19_2_x"type="number" placeholder="coordenada x.." required>
+                                        <label for="input_19_2_y">*Coordenada Y</label>
+                                        <input id="input_19_2_y"type="number" placeholder="coordenada Y.." required>
+
+                                        <button type="button" py-click="enviar_coordenadas">Enviar</button>  <!--el boton debe tener el mismo nombre de la funcion-->
+                                        <button type="button" py-click="reiniciar_datos">Limipiar</button>
+                                                                               
+                                        <p id="resultado19_2_2">SALIDA DE DATOS AQUÍ !..</p>
+                                </fieldset>
+                            </form >
+                        </article>
+                        <article id="sesion19_ejer3">
+                            <h4>laboratorio 19 ejercicio 3: --Manejo de diccionarios--</h4>
+                                <p>-Crear un diccionario que almacene los nombres de tres estudiantes y sus respectivas
+                                    calificaciones. Escribir un programa que imprima el nombre del estudiante con la calificación
+                                    más alta.
+                                    nombre_max = max(calificaciones, key=calificaciones.get)
+                                    print(f"El estudiante con la calificación más alta es {nombre_max} con una calificación
+                                    de {calificaciones[nombre_max]}.")
+                                </p>
+
+                            <form action="" class="formulario">
+                                <fieldset>
+                                    <legend>Calificaciones de estudiantes:</legend>
+                                        <label for="input_19_3_nombre">*Ingrese nombre del estudiante</label>
+                                        <input id="input_19_3_nombre" type="text" placeholder="nombre..." required >
+                                        <label for="input_19_3_calificacion">*Ingrese Calificación</label>
+                                        <input id="input_19_3_calificacion"type="number" placeholder="Calificación..." required>
+
+                                        <button type="button" py-click="agregar_estudiantes">Ingresar datos</button>  <!--el boton debe tener el mismo nombre de la funcion-->
+                                        <button type="button" py-click="reiniciar_datos">reiniciar</button>
+                                        <button type="button" py-click="boton_imprimir_estudiantes">🖨️ Imprimir Reporte</button>
+                                       
+                                        <p id="resultado19_3">SALIDA DE DATOS AQUÍ !..</p>
+                                </fieldset>
+                            </form >
+                        </article>
+                        <article id="sesion19_ejer4">
+                            <h4>laboratorio 19 ejercicio 4: --Combinación de Estructuras--</h4>
+                                <p> Parte 4: Combinación de Estructuras
+                                    - Escribir un programa que permita al usuario ingresar el nombre de un estudiante y su
+                                    calificación. Si el estudiante ya existe en el diccionario, actualizar la calificación; si no existe,
+                                    agregarlo al diccionario. Finalmente, mostrar todos los estudiantes y sus calificaciones.
+                                    estudiantes{}
+                                </p>
+                            <form action="" class="formulario">
+                                <fieldset>
+                                    <legend>Actualización de estudiantes con diccionarios:</legend>
+                                        <label for="input_19_4_nombre">*Ingrese nombre del estudiante</label>
+                                        <input id="input_19_4_nombre" type="text" placeholder="nombre..." required >
+                                        <label for="input_19_4_calificacion">*Ingrese Calificación</label>
+                                        <input id="input_19_4_calificacion"type="number" placeholder="Calificación..." required>
+
+                                        <button type="button" py-click="guardar_mostrar">Ingresar datos</button>  <!--el boton debe tener el mismo nombre de la funcion-->
+                                        <button type="button" py-click="reiniciar_datos_4">reiniciar</button>
+                                        <button type="button" py-click="boton_imprimir_estudiantes_4">🖨️ Imprimir Reporte</button>
+                                       
+                                        <p id="resultado19_4">SALIDA DE DATOS AQUÍ !..</p>
+                                </fieldset>
+                            </form >
+                        </article>
+          
+            </section><!-- ----cierre de la sección LABORATORIO  19----- -- -->
+
+
+                  <!-- ------- -------LABORATORIO  20----- ---->
+            <section class="sesion20" id="sesion20">
+                     <article id="sesion20_ejer1">
+                             <h4>Laboratorio 20 ejercicio 2 "radio de un círculo"</h4>
+                                <form action="" class="formulario">
+                                     <fieldset>
+                                        <legend>Calcular el radio de un círculo</legend>
+                                                <label for="nombre20">Por favor, ingrese su nombre...  </label>
+                                                <input id="nombre20" type="text" placeholder="Escribe aquí">
+                                                <button type="button" py-click="bienvenida">Enviar</button>
+                                                <p id="saludo"></p>
+                                                <label for="radio">ingrese el radio de un círculo para mostrar su área..  </label>
+                                                <input id="radio" type="number" placeholder="Escribe su radio aquí">
+                                                <button type="button" py-click="mostrar">Calcular</button>  <!--el boton debe tener el mismo nombre de la funcion-->
+                                                <p id="salida">resultado</p>
+                                    </fieldset>
+                                </form >
+                    </article>    
+                    <article id="sesion20_ejer2">
+                            <h4>laboratorio 20 ejercicio 2: --Funciones con Parámetros por Defecto--</h4>
+                                <p> Parte 2:
+                                    - Escribe una función llamada `descuento` que tome el precio de un producto y un
+                                    porcentaje de descuento. La función debe retornar el precio final después de aplicar el
+                                    descuento. Si no se proporciona el porcentaje de descuento, debe asumir que es 10%.
+                                    precio=int(input("Ingrese el precio: "))
+                                </p>
+                            <form action="" class="formulario">
+                                <fieldset>
+                                    <legend>descuento con parámetros:</legend>
+                                        <label for="input_20_2_precio">*Ingrese precio del producto</label>
+                                        <input id="input_20_2_precio" type="number" placeholder="precio..." required >
+                                        <label for="input_20_2_descuento">*Ingrese descuento(si omite este campo, se aplica 10 % de descuento)</label>
+                                        <input id="input_20_2_descuento" type="number" placeholder="descuento ...">
+
+                                        <button type="button" py-click="mostrar_descuento">Ingresar</button>  <!--el boton debe tener el mismo nombre de la funcion-->
+                                                                            
+                                       
+                                        <p id="resultado20_2">Total a pagar !..</p>
+                                </fieldset>
+                            </form >
+                        </article>        
+                        <article id="sesion20_ejer3">
+                            <h4>laboratorio 20 ejercicio 3: --Funciones con Parámetros arbitrarios-</h4>
+                                <p> Parte 3:
+                                    - Escribe una función llamada <strong>mayor_valor</strong> que acepte un número arbitrario de argumentos
+                                    y retorne el mayor valor.
+                                </p>
+                            <form action="" class="formulario">
+                                <fieldset>
+                                    <legend>El mayor de los elementos</legend>
+                                        <label for="input_20_3_numero">*Ingrese números a la tupla para ver el mayor</label>
+                                        <input id="input_20_3_numero" type="number" placeholder="número..." required >
+                                        
+                                        <button type="button" py-click="ingresar_numeros_20_3">Ingresar</button>  <!--el boton debe tener el mismo nombre de la funcion-->
+                                        <button type="button" py-click="calcular_mayor_20_3">Calcular el mayor</button>                                 
+                                       
+                                        <p id="resultado20_3">Total a pagar !..</p>
+                                </fieldset>
+                            </form >
+                        </article>
+                        <article id="sesion20_ejer4_1">
+                            <h4>laboratorio 20 ejercicio 4.1: --Parámetros de tipo lista-</h4>
+                                <p> Parte 4: 
+                                    • Escribir un programa que defina por asignación una lista de 6 enteros en el bloque
+                                    principal del programa. Elaborar tres funciones, la primera recibe la lista y retorna la
+                                    suma de todos sus elementos, la segunda recibe la lista y retorna el mayor valor y la
+                                    última recibe la lista y retorna el menor.
+                                    suma=suma+lista[x]
+                                </p>
+                            <form action="" class="formulario">
+                                <fieldset>
+                                    <legend>El mayor, menor y suma de elementos de listas</legend>
+                                        <label for="input_20_4_numero">*Ingrese 6 valores numéricos para cálculos de listas</label>
+                                        <input id="input_20_4_numero" type="number" placeholder="número..." required >
+                                        
+                                        <button type="button" py-click="ingresar_numeros_20_4_1">Ingresar número</button>  <!--el boton debe tener el mismo nombre de la funcion-->
+                                        <button type="button" py-click="calcular_20_4_1">Calcular</button>    
+                                        <button type="button" py-click="limpiar_20_4_1">Limpiar</button>                              
+                                       
+                                        <p id="resultado20_4_1">Resultado..</p>
+                                </fieldset>
+                            </form >
+                        </article>
+                        <article id="sesion20_ejer4_2">
+                            <h4>laboratorio 20 ejercicio 4.2: --lista que tiene más carácteres--</h4>
+                                <p> Escribir una función que reciba una lista de string y nos retorne el que tiene más
+                                    caracteres. Si hay más de uno con dicha cantidad de caracteres debe retornar el que
+                                    tiene un valor de componente más baja.
+                                    En el bloque principal iniciamos por asignación la lista de string:
+                                    palabras=["enero", "febrero", "marzo", "abril", "mayo", "junio"]
+                                    print("Palabra con mas caracteres:",mascaracteres(palabras))
+                                </p>
+                            <form action="" class="formulario">
+                                <fieldset>
+                                    <legend>El mayor, menor y suma de elementos de listas</legend>
+                                        <label for="input_20_4_2_str">*Ingrese  palabras para determinar la que tiene la mayor cantidad de letras</label>
+                                        <input id="input_20_4_2_str" type="text" placeholder="número..." required >
+                                        
+                                        <button type="button" py-click="ingresar_str_20_4_2">Ingresar</button>  <!--el boton debe tener el mismo nombre de la funcion-->
+                                        <button type="button" py-click="calcular_20_4_2">Calcular</button>    
+                                        <button type="button" py-click="limpiar_20_4_2">Limpiar</button>                              
+                                       
+                                        <p id="resultado20_4_2">Resultado !..</p>
+                                </fieldset>
+                            </form >
+                        </article>
+            </section>
+
+            <!-- ------- -------LABORATORIO  21----- ---->
+            <section class="sesion21" id="sesion21">
+                    <article id="sesion21_ejer1">
+                            <h4>Ejercicio 1 laboratorio 21</h4>
+
+                    </article>
+            </section>  
+           
+        </main>
+                <aside class="sidebar_derecha"> <!-- ------- -------sidebar derecho----- ---->
+                    <h3>Recursos en línea</h3>
+                        <ul>
+                            <li><a href="https://docs.python.org/3/" target="_blank">Doc Python</a></li>
+                            <li><a href="https://www.w3schools.com/python/" target="_blank">W3Schools</a></li>
+                            <li><a href="https://pyscript.net/" target="_blank">PyScript</a></li>
+                        </ul>
+                </aside>
+        </div>
+       <script src="/script.js" ></script>   <!--enlaza al boton hamburguesa---->
+
+                     <!--enlaza a la carpeta de seion 18---->
+        <py-script src="/sesion18/S18_pedirDatos.py"></py-script>
+        <py-script src="/sesion18/s18_ejer2_calc_.py"></py-script>
+                     <!--enlaza a la carpeta de seion 19---->
+        <py-script src="/sesion19/sesion19_ejer1_par.py"></py-script>
+        <py-script src="/sesion19/sesion19_ejer1_2_cant_digitos.py"></py-script>
+        <py-script src="/sesion19/sesion19_ejer2_salario.py"></py-script>
+        <py-script src="/sesion19/sesion19_ejer2_1_cartesiano.py"></py-script>
+        <py-script src="/sesion19/sesion19_ejer3_diccionario.py"></py-script>
+        <py-script src="/sesion19/sesion19_ejer4_combinacion_estructuras.py"></py-script>
+                     <!--enlaza a la carpeta de seion 19---->
+        <py-script src="/lab_20_py/sesion20_ejer1.py"></py-script>
+        <py-script src="/lab_20_py/sesion20_ejer2_funcion_par_defecto.py"></py-script>
+        <py-script src="/lab_20_py/sesion20_ejer3_arbitrarios.py"></py-script>
+        <py-script src="/lab_20_py/sesion20_ejer4_1_listas.py"></py-script>
+        <py-script src="/lab_20_py/sesion20_ejer4_2_func_listas_cadenas.py"></py-script>
+       
+                       
+</body>
+</html>
