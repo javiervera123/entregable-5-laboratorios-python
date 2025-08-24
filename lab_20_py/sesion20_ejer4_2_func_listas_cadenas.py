@@ -25,13 +25,24 @@ def funcion_lista_cadena(palabras):
     print("Palabra con más caracteres (desempate alfabético):", resultado)
 """
 def ingresar_str_20_4_2(event):
-    palabras = document.getElementById("input_20_4_2_str").value
-    lista_palabras.append(palabras)       #agrega valores a mi lista.
-    document.getElementById("input_20_4_2_str").value =""
+    try:
+        palabras = document.getElementById("input_20_4_2_str").value
+        # Verificar que no esté vacío y que contenga solo letras
+        if not palabras.strip():
+            raise ValueError("El nombre no puede estar vacío")
+        if any(char.isdigit() for char in palabras):
+            raise ValueError("El nombre no puede contener números")
+        
+        lista_palabras.append(palabras)       #agrega valores a mi lista.
+        document.getElementById("input_20_4_2_str").value =""
+    except ValueError as e:
+        # Mostrar el error 
+        display(str(e), target="resultado20_4_2", append=False)
 
 def calcular_20_4_2(event):
      mas_caracteres = funcion_lista_cadena(lista_palabras)
-     display(f"Palabra con más caracteres: {mas_caracteres}", target ="resultado20_4_2", append=False)
+     display(f"las palabras ingresadas son: {lista_palabras} "
+    f"\nPalabra con más caracteres: {mas_caracteres}", target ="resultado20_4_2", append=False)
 
 def limpiar_20_4_2(event):
     lista_palabras.clear() # o listas_palabras=[]

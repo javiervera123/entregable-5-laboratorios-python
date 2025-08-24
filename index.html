@@ -49,10 +49,9 @@
                             <li>
                                 <button class="menu-toggle" aria-controls="submenu-21">LAB PYTHON SESION 21</button>                    
                                 <ul id="submenu-21" class="submenu">
-                                    <li><a href="#sesion21_ejer1">EJERCICIO 1</a></li>
-                                    <li><a href="#sesion21_ejer2">EJERCICIO 2</a></li>
-                                    <li><a href="#sesion21_ejer3">EJERCICIO 3</a></li>
-                                    <li><a href="#sesion21_ejer4">EJERCICIO 4</a></li>
+                                    <li><a href="https://www.netacad.com/courses/python-essentials-1?courseLang=es-XL&instance_id=6d274f5b-97c7-49f8-84fc-03e01858d0d8">CISCO PYTHON</a></li>
+                                    <li><a href="#sesion21_ejer1">CALCULADORA</a></li>
+                                    <li><a href="#sesion21_ejer2">NÚMERO ALEATORIO</a></li>
                                 </ul>
                             </li>
 
@@ -73,8 +72,8 @@
                     <h3>Recursos en línea</h3> <!-- ------- -sidebar izquierdo----- ---->
                         <ul>
                             <li><a href="https://javiervera123.github.io/entregable4_TalentoTeach/" target="_blank">Hoja de vida</a></li>
-                            <li><a href="https://www.w3schools.com/python/" target="_blank">Mi repositorio</a></li>
-                            <li><a href="https://pyscript.net/" target="_blank">en construcción...</a></li>
+                            <li><a href="https://github.com/javiervera123" target="_blank">Mi repositorio</a></li>
+                            <li><a href="" target="_blank">en construcción...</a></li>
                         </ul>
                 </aside>
         <main>
@@ -228,7 +227,7 @@
                                         <input id="input_19_3_calificacion"type="number" placeholder="Calificación..." required>
 
                                         <button type="button" py-click="agregar_estudiantes">Ingresar datos</button>  <!--el boton debe tener el mismo nombre de la funcion-->
-                                        <button type="button" py-click="reiniciar_datos">reiniciar</button>
+                                        <button type="button" py-click="reiniciar_datos">Limpiar</button>
                                         <button type="button" py-click="boton_imprimir_estudiantes">🖨️ Imprimir Reporte</button>
                                        
                                         <p id="resultado19_3">SALIDA DE DATOS AQUÍ !..</p>
@@ -358,7 +357,7 @@
                             <form action="" class="formulario">
                                 <fieldset>
                                     <legend>Mayor en carácteres</legend>
-                                        <label for="input_20_4_2_str">*Ingrese  palabras para determinar la que tiene la mayor cantidad de letras</label>
+                                        <label for="input_20_4_2_str">*Ingrese número a calcular</label>
                                         <input id="input_20_4_2_str" type="text" placeholder="palabra..." required >
                                         
                                         <button type="button" py-click="ingresar_str_20_4_2">Ingresar</button>  <!--el boton debe tener el mismo nombre de la funcion-->
@@ -374,9 +373,33 @@
             <!-- ------- -------LABORATORIO  21----- ---->
             <section class="sesion21" id="sesion21">
                     <article id="sesion21_ejer1">
-                            <h4>Ejercicio 1 laboratorio 21</h4>
-
-                    </article>
+                            <h4>laboratorio ENTREGABLE ejercicio 1: --Calculadora en python--</h4>
+                                <p>Paso 4. Script de Resolución de Problemas Simples-
+                                    Desarrollar un programa que simule una calculadora básica, permitiendo al usuario 
+                                    realizar sumas, restas, multiplicaciones y divisiones.
+                                </p>
+                            <form action="" class="formulario">
+                                <fieldset>
+                                    <legend>Calculadora</legend>
+                                        <label for="num1_calculadora">*Ingrese número a calcular</label>
+                                        <input id="num1_calculadora" type="number" placeholder="número 1.." required min ="0">
+                                        <label for="num2_calculadora">*Ingrese número a calcular</label>
+                                        <input id="num2_calculadora" type="number" placeholder="número 2.." required min ="0">
+                                        <label for="operacion">Operación:</label>
+                                        <select id="operacion">
+                                            <option value="">Que operación desea realizar</option>
+                                            <option value="suma">Suma (+)</option>
+                                            <option value="resta">Resta (-)</option>
+                                            <option value="multiplicacion">Multiplicación (×)</option>
+                                            <option value="division">División (÷)</option>
+                                        </select>
+                                        <button type="button" py-click="calcular_operacion">calcular</button>  <!--el boton debe tener el mismo nombre de la funcion-->
+                                        <button type="button" py-click="limpiar_21_1">Limpiar</button>                              
+                                       
+                                        <p id="resultado21_1">Resultado !..</p>
+                                </fieldset>
+                            </form >
+                        </article>
             </section>  
            
         </main>

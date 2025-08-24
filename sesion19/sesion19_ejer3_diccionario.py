@@ -75,7 +75,8 @@ def reiniciar_datos(event):
     contador = 0
     document.getElementById("input_19_3_nombre").value = ""
     document.getElementById("input_19_3_calificacion").value = ""
-    display("🔄 Datos reiniciados.", target="resultado19_3", append=False)
+    document.getElementById("resultado19_3").innerHTML = ""
+    display("Datos limpiados...", target="resultado19_3", append=False)
 
 def boton_imprimir_estudiantes(event):
     if not dic_estudiantes:
