@@ -45,3 +45,4 @@ def limpiar_21_1(event):
     document.getElementById("num1_calculadora").value = ""
     document.getElementById("num2_calculadora").value = ""
     display("", target="resultado21_1", append=False)
+    

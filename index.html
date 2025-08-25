@@ -51,7 +51,7 @@
                                 <ul id="submenu-21" class="submenu">
                                     <li><a href="https://www.netacad.com/courses/python-essentials-1?courseLang=es-XL&instance_id=6d274f5b-97c7-49f8-84fc-03e01858d0d8">CISCO PYTHON</a></li>
                                     <li><a href="#sesion21_ejer1">CALCULADORA</a></li>
-                                    <li><a href="#sesion21_ejer2">NÚMERO ALEATORIO</a></li>
+                                    <li><a href="#sesion21_ejer2">JUEGO NÚMERO ALEATORIO</a></li>
                                 </ul>
                             </li>
 
@@ -400,6 +400,25 @@
                                 </fieldset>
                             </form >
                         </article>
+                        <article id="sesion21_ejer2">
+                            <h4>laboratorio 21 Entregable ejercicio 2: --Adivinar número aleatorio-</h4>
+                                <p> Script de Resolución de Problemas Simples
+                                    Crear un juego de adivinanza donde el programa genere un número aleatorio y el usuario deba 
+                                    adivinarlo, recibiendo pistas de "mayor" o "menor" en cada intento.
+                                </p>
+                            <form action="" class="formulario">
+                                <fieldset>
+                                    <legend>Juego a ganarle a la máquina:</legend>
+                                        <label for="input_21_2_numero">*Quieres divertirte, ingresa un número del 1 al 50 para adivinar</label>
+                                        <input id="input_21_2_numero" type="number" placeholder="número 1 al 50." required  min="1" max="50">
+                                        
+                                        <button type="button" py-click="calcular_21_2">adivinar</button>    
+                                        <button type="button" py-click="limpiar_21_2">Limpiar</button>                              
+                                       
+                                        <p id="resultado21_2">Resultado..</p>
+                                </fieldset>
+                            </form >
+                        </article>
             </section>  
            
         </main>
@@ -432,6 +451,8 @@
         <py-script src="lab_20_py/sesion20_ejer4_2_func_listas_cadenas.py"></py-script>
                      <!--enlaza a la carpeta de seion 21---->
         <py-script src="lab_21_entregable/lab_21_ejer1_calculadora.py"></py-script>
+        <py-script src="lab_21_entregable/lab_21_ejer2_aleatorio.py"></py-script>
+        
         
        
                        
